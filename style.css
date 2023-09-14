@@ -74,14 +74,12 @@ header .navbarbox .togglerbtn:active {
      object-fit: cover;
 }
 .heroBanner .slider-wrapper .duoimg-container .bnrtxt {
-  padding: 50px 0px 0 75px;
+  padding: 50px 100px 50px 75px;
   background: white;
   position: absolute;
   top: 50%;
   left: 30%;
   transform: translate(-50%, -50%);
-  width: 440px;
-  height: 250px;
 }
 .heroBanner .slider-wrapper .duoimg-container .bnrtxt p {
   font-size: 0.6rem;
