@@ -21,7 +21,7 @@
     />
   </head>
   <body>
-    <!-- Header-start -->
+    <!-- Header -->
     <header class="px-lg-5 py-lg-3">
       <div class="container-fluid">
         <div class="d-flex justify-content-between align-items-baseline">
@@ -90,21 +90,122 @@
         </div>
       </div>
     </header>
-    <!-- Header-end -->
-    <!-- Head-banner-start -->
+
+    <!-- Head-banner -->
     <section class="heroBanner">
       <div class="container-fluid p-0">
-        <div class="row">
-          <div class="col-md-3 d-none d-md-block">
-            <div class="left-imgbnr"></div>
+        <div class="slider-wrapper">
+          <div class="duoimg-container">
+            <div class="row m-0">
+              <div class="col-lg-3 col-md-5 p-0 d-none d-md-block">
+                <div class="left-imgbnr">
+                  <img src="images/left-bnrside1-min.jpg" alt="" />
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-7 p-0">
+                <div class="rgt-imgbnr">
+                  <img src="images/bg-1-main-min.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="bnrtxt">
+              <p>good design</p>
+              <h1>we move the <br /><b> digital industry</b></h1>
+              <button class="btn">project details</button>
+            </div>
           </div>
-          <div class="col-md-9">
-            <div class="rgt-imgbnr"></div>
+          <div class="duoimg-container">
+            <div class="row m-0">
+              <div class="col-lg-3 col-md-5 p-0 d-none d-md-block">
+                <div class="left-imgbnr">
+                  <img src="images/left-bnrside3-min.jpg" alt="" />
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-7 p-0">
+                <div class="rgt-imgbnr">
+                  <img src="images/bg-2-main-min.jpg" alt="" />
+                </div>
+              </div>
+              <div class="bnrtxt">
+                <p>good design</p>
+                <h1>we move the <br /><b>but significant</b></h1>
+                <button class="btn">project details</button>
+              </div>
+            </div>
+          </div>
+          <div class="duoimg-container">
+            <div class="row m-0">
+              <div class="col-lg-3 col-md-5 p-0 d-none d-md-block">
+                <div class="left-imgbnr">
+                  <img src="images/left-bnrside2-min.jpg" alt="" />
+                </div>
+              </div>
+              <div class="col-lg-9 col-md-7 p-0">
+                <div class="rgt-imgbnr">
+                  <img src="images/bg-3-main-min.jpg" alt="" />
+                </div>
+              </div>
+              <div class="bnrtxt">
+                <p>good design</p>
+                <h1>we do things <br /><b> differently</b></h1>
+                <button class="btn">project details</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Head-banner-end -->
+    <!--Article -->
+    <section class="handcraft-article">
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-12">
+            <p class="arti-title">Handcrafted Templates</p>
+          </div>
+          <div class="col-6">
+            <div class="left-text">
+              <h1>Perfect powerful theme for creatives designer people.</h1>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="rgt-text">
+              <h4>
+                Beautiful and easy to use UI, professional animations and drag
+                and drop feature with unique digital experiences
+              </h4>
+              <p>
+                With years of experience in the website design and development
+                industry ThemeZaa pride ourselves on creating unique, creative
+                and quality designs that are developed upon the latest modern
+                coding and developing techniques, which are then built using the
+                most up to date, structured coding framework so that your
+                development team can take it to the next level with ease.
+              </p>
+              <div class="row">
+                <div class="col-4">
+                  <div class="d-flex align-items-center">
+                    <i class="fal fa-image"></i>
+                    <p class="m-0">Development</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="d-flex align-items-center">
+                    <i class="fal fa-image"></i>
+                    <p class="m-0">Experiences</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="d-flex align-items-center">
+                    <i class="fal fa-image"></i>
+                    <p class="m-0">Framework</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- script.cdns start -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
@@ -126,6 +227,22 @@
       integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".slider-wrapper").slick({
+          slideToscroll: 1,
+          slideToshow: 1,
+          autoplay: false,
+          autoplaySpeed: 5000,
+          arrows: false,
+          cssEase: "ease-in-out",
+          pauseOnFocus: false,
+          speed: 1000,
+          dots: true,
+          swipeToSlide: true,
+        });
+      });
+    </script>
     <!-- script.cdns end-->
   </body>
 </html>
