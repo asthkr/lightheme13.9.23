@@ -73,7 +73,7 @@ header {
           object-fit: cover;
         }
         .bnrtxt {
-          padding: 75px 50px 100px 75px;
+          padding: 75px 50px 75px 75px;
           background: white;
           position: absolute;
           top: 50%;
@@ -189,6 +189,9 @@ header {
     width: 65%;
     flex-grow: 1;
   }
+}
+.gallery{
+  
 }
 
 @media (max-width: 767px) {

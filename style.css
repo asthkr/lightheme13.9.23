@@ -77,7 +77,7 @@ header .navbarbox .togglerbtn:active {
      object-fit: cover;
 }
 .heroBanner .slider-wrapper .duoimg-container .rgt-imgbnr .bnrtxt {
-  padding: 75px 50px 100px 75px;
+  padding: 75px 50px 75px 75px;
   background: white;
   position: absolute;
   top: 50%;
