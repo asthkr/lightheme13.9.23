@@ -182,10 +182,21 @@ header .navbarbox .togglerbtn:active {
   flex-grow: 1;
 }
 
+.gallery {
+  margin: 75px 0;
+}
+.gallery .cards {
+  max-width: 100%;
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0;
+  display: grid;
+  gap: 0px;
+  grid-template-areas: "one two four five" "three two six seven";
+}
 .gallery .card {
   background-color: #ff214f;
   color: white;
-  height: 100%;
+  width: 25vw;
   margin: 0;
   border-color: transparent;
   border-radius: 0px;
@@ -210,6 +221,42 @@ header .navbarbox .togglerbtn:active {
      object-fit: cover;
   transition: all ease-in-out 100ms, transform 200ms;
 }
+.gallery .card figure figcaption {
+  opacity: 0;
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  bottom: -40px;
+  transition: all 300ms ease-in-out;
+}
+.gallery .card figure figcaption .textBox {
+  color: white;
+  text-transform: uppercase;
+  text-align: start;
+  height: 100%;
+}
+.gallery .card figure figcaption .textBox .seperator-line {
+  width: 40%;
+  background-color: #000;
+  opacity: 0.5;
+  height: 1px;
+  margin-bottom: 10px;
+}
+.gallery .card figure figcaption .textBox .headtxt {
+  font-weight: 600;
+}
+.gallery .card figure figcaption .textBox .subtxt {
+  letter-spacing: 1;
+  line-height: 14px;
+  font-size: 12px;
+  margin: 0 !important;
+}
+.gallery .card figure:hover figcaption {
+  opacity: 1;
+  bottom: 0;
+}
 .gallery .card figure:hover img {
   filter: blur(5px);
   opacity: 0.2;
@@ -220,34 +267,108 @@ header .navbarbox .togglerbtn:active {
   transition: all ease-in-out 100ms, transform 200ms;
 }
 .gallery .gBox1 {
+  height: 50vh;
   grid-area: one;
 }
 .gallery .gBox2 {
+  height: 100vh;
   grid-area: two;
 }
 .gallery .gBox3 {
+  height: 50vh;
   grid-area: three;
 }
 .gallery .gBox4 {
+  height: 50vh;
   grid-area: four;
 }
 .gallery .gBox5 {
+  height: 50vh;
   grid-area: five;
 }
 .gallery .gBox6 {
+  height: 50vh;
   grid-area: six;
 }
 .gallery .gBox7 {
+  height: 50vh;
   grid-area: seven;
 }
-.gallery .cards {
-  max-width: 100%;
-  height: 640px;
-  overflow: hidden;
+
+.textsec {
+  margin: 75px 0;
+}
+.textsec .heading {
+  width: 70%;
+}
+.textsec .heading h2 {
+  font-size: 32px;
+  line-height: 40px;
+}
+.textsec .ser-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 75px;
+}
+.textsec .ser-boxes .headtxt {
+  font-weight: 500;
+  font-size: 20px;
+}
+.textsec .ser-boxes p {
+  color: #6f6f6f;
+}
+.textsec .ser-boxes .explorebtn {
+  color: #6f6f6f;
+  display: inline-block;
+}
+.textsec .ser-boxes .explorebtn h6 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  position: relative;
   margin: 0;
-  display: grid;
-  gap: 0px;
-  grid-template-areas: "one two four five" "three two six seven";
+}
+.textsec .ser-boxes .explorebtn h6::before {
+  content: "";
+  width: 80px;
+  height: 0px;
+  position: absolute;
+  left: -90px;
+  top: 50%;
+  opacity: 0.2;
+  border-top: 1px solid black;
+}
+.textsec .ser-boxes .explorebtn:hover {
+  color: #ff214f;
+}
+.textsec .ser-boxes .explorebtn:hover h6::before {
+  border-top: 1px solid #ff214f;
+}
+
+.featuresec {
+  margin: 75px 0;
+  padding: 100px 0;
+  background: rgb(24, 24, 24);
+}
+.featuresec .heading {
+  margin-bottom: 50px;
+  color: #fcfcfc;
+}
+.featuresec .heading h2 {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.featuresec .heading h6 {
+  text-transform: uppercase;
+  color: #6f6f6f;
+  font-weight: 600;
+}
+.featuresec .content {
+  margin-top: 75px;
+}
+.featuresec .content .singBox {
+  width: 80%;
 }
 
 @media (max-width: 767px) {
@@ -344,6 +465,41 @@ header .navbarbox .togglerbtn:active {
   .handcraft-article .rgt-text {
     gap: 15px;
   }
+  .gallery .card {
+    width: 50vw;
+  }
+  .gallery .cards {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0;
+    display: grid;
+    gap: 0px;
+    grid-template-areas: "one two " "three two " "four five " "six seven";
+  }
+  .textsec {
+    margin: 75px 0;
+  }
+  .textsec .heading {
+    width: 100%;
+  }
+  .textsec .heading h2 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .textsec .ser-boxes {
+    gap: 25px;
+    margin-top: 40px;
+  }
+  .textsec .ser-boxes .explorebtn h6 {
+    padding-left: 90px;
+  }
+  .textsec .ser-boxes .explorebtn h6::before {
+    content: "";
+    left: 0px;
+  }
+}
+@media (max-width: 480px) {
   .gallery .cards {
     max-width: 100%;
     height: auto;
@@ -352,5 +508,11 @@ header .navbarbox .togglerbtn:active {
     display: grid;
     gap: 0px;
     grid-template-areas: "one" "two" "three" "four" "five" "six" "seven";
+  }
+  .gallery .card {
+    width: 100vw;
+  }
+  .gallery .gBox2 {
+    height: 50vh;
   }
 }/*# sourceMappingURL=style.css.map */
